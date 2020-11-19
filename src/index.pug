@@ -1,9 +1,19 @@
 extends layout
 
+include components/carousel/carousel.pug
+
 block variables
   - var title = 'ars котельная'
   - var descr = 'artist run space в томске'
 
 block content
     +b.H1.title ars котельная
-    +b.p.test ветка разработки
+    +b.p.test экспериментальная разработка
+    +carousel
+    +b.control
+      +e.BUTTON.left
+        +e.icon= '<'
+      +e.BUTTON.right
+        +e.icon= '>'
+      +e.BUTTON.back
+        +e.icon= 'v'
