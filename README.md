@@ -45,7 +45,7 @@ ______
 Установка и запуск проекта:  
 ```
 git clone https://github.com/kotelna9/ars.git
-cd resume
+cd ars
 npm i
 npm run start
 ```
