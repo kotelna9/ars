@@ -1,0 +1,39 @@
+{
+    "points" : [
+        {
+            "id": 0,
+            "right": 1,
+            "left": 3,
+            "backward": 2,
+            "forward": 4,
+            "url": "images/1.jpg"
+        },
+        {
+            "id": 1,
+            "right": 2,
+            "left": 0,
+            "backward": 3,
+            "url": "images/2.JPG"
+        },
+        {
+            "id": 2,
+            "right": 3,
+            "left": 1,
+            "backward": 0,
+            "forward": 5,
+            "url": "images/3.jpg"
+        },
+        {
+            "id": 3,
+            "right": 0,
+            "left": 2,
+            "backward": 1,
+            "url": "images/4.jpg"
+        },
+        {
+            "id": 4,
+            "backward": 2,
+            "url": "images/5.jpg"
+        }
+    ]
+}

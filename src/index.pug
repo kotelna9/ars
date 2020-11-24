@@ -1,6 +1,6 @@
 extends layout
 
-include components/carousel/carousel.pug
+include components/bg-switcher/bg-switcher.pug
 
 block variables
   - var title = 'ars котельная'
@@ -9,7 +9,8 @@ block variables
 block content
     +b.H1.title ars котельная
     +b.p.test экспериментальная разработка
-    +carousel
+    //- +carousel
+    +bg-switcher
     +b.control
       +e.BUTTON.left
         +e.icon= '<'
