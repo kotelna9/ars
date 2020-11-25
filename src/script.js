@@ -1,78 +1,33 @@
 import '@/style.scss'
 import bgSwitcher from '@comp/bg-switcher/bg-switcher'
+import controlBtns from '@comp/control-btns/control-btns'
 
 import map from '@data/map.json'
 const points = map.points
 
-bgSwitcher('init', points[0].url);
+let currentPoint = 0
+let currentDirection = 'right'
+bgSwitcher('init', points[currentPoint].url)
 
-// setTimeout(()=>{bgSwitcher('right', points[1].url)}, 3000)
+const ctrlBtn = controlBtns(points[currentPoint])
+ctrlBtn.right.addEventListener('click', () => {pointRouter('right')})
+ctrlBtn.left.addEventListener('click', () => {pointRouter('left')})
+ctrlBtn.backward.addEventListener('click', () => {pointRouter('backward')})
+ctrlBtn.forward.addEventListener('click', () => {pointRouter('forward')})
 
-// setTimeout(()=>{bgSwitcher('left', points[0].url)}, 6000)
+let isCtrlBloked = false
 
-setTimeout(()=>{bgSwitcher('forward', points[4].url)}, 3000)
-
-
-
-
-// import carousel from '@comp/carousel/carousel'
-
-// const rightBtn = document.querySelector('.control__right')
-// const leftBtn = document.querySelector('.control__left')
-// const backBtn = document.querySelector('.control__back')
-
-// let currentPrev = 4
-// let currentNext = 1
-// let rightDirection = true;
-
-// rightBtn.addEventListener('click', () => {
-//     if (!rightDirection) {
-//         let x = currentPrev
-//         currentPrev = currentNext
-//         currentNext = x
-//         carousel(currentPrev, currentNext)
-//         rightDirection = true
-//     } else {
-//         currentNext = currentNext >= 4 ? 1 : currentNext + 1
-//         carousel(currentPrev, currentNext)
-//         currentPrev = currentPrev >= 4 ? 1 : currentPrev + 1
-//     }
-//     console.log('r')
-// });
-
-// leftBtn.addEventListener('click', () => {
-//     if (rightDirection) {
-//         let x = currentPrev
-//         currentPrev = currentNext
-//         currentNext = x
-//         carousel(currentPrev, currentNext, 'left')
-//         rightDirection = false
-//     } else {
-//         currentNext = currentNext <= 1 ? 4 : currentNext - 1
-//         carousel(currentPrev, currentNext, 'left')
-//         currentPrev = currentPrev <= 1 ? 4 : currentPrev - 1
-//     }
-//     console.log('l')
-// });
-
-// backBtn.addEventListener('click', () => {
-//     if (rightDirection) {
-//         currentNext = currentNext >= 4 ? 1 : currentNext + 1;
-//         carousel(currentPrev, currentNext);
-//         currentPrev = currentPrev >= 4 ? 1 : currentPrev + 1;
-//         setTimeout(() => {  
-//             currentNext = currentNext >= 4 ? 1 : currentNext + 1;
-//             carousel(currentPrev, currentNext);
-//             currentPrev = currentPrev >= 4 ? 1 : currentPrev + 1;
-//         }, 1500)
-//     } else {
-//         currentNext = currentNext <= 1 ? 4 : currentNext - 1
-//         carousel(currentPrev, currentNext, 'left')
-//         currentPrev = currentPrev <= 1 ? 4 : currentPrev - 1
-//         setTimeout(() => {
-//             currentNext = currentNext <= 1 ? 4 : currentNext - 1
-//             carousel(currentPrev, currentNext, 'left')
-//             currentPrev = currentPrev <= 1 ? 4 : currentPrev - 1
-//         }, 1500)
-//     }
-// });
+function pointRouter(direction) {
+    if (!isCtrlBloked) {
+        if (points[currentPoint][direction] !== undefined) {
+            isCtrlBloked = true
+            setTimeout(() => {isCtrlBloked = false}, 1500)
+            currentPoint = points[currentPoint][direction]
+            currentDirection = direction !== 'backward' ? direction : currentDirection
+            bgSwitcher(direction, points[currentPoint].url, currentDirection)
+            controlBtns(points[currentPoint])
+        } else {
+            alert('ракурс недоступен')
+        }
+    }
+}

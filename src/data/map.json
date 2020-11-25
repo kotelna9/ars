@@ -6,6 +6,10 @@
             "left": 3,
             "backward": 2,
             "forward": 4,
+            "forwardPosition": {
+                "x": 650,
+                "y": 500
+            },
             "url": "images/1.jpg"
         },
         {
@@ -13,7 +17,7 @@
             "right": 2,
             "left": 0,
             "backward": 3,
-            "url": "images/2.JPG"
+            "url": "images/2.jpg"
         },
         {
             "id": 2,
@@ -21,6 +25,10 @@
             "left": 1,
             "backward": 0,
             "forward": 5,
+            "forwardPosition": {
+                "x": 850,
+                "y": 450
+            },
             "url": "images/3.jpg"
         },
         {
@@ -34,6 +42,13 @@
             "id": 4,
             "backward": 2,
             "url": "images/5.jpg"
+        },
+        {
+            "id": 5,
+            "right": 3,
+            "left": 1,
+            "backward": 0,
+            "url": "images/6.jpg"
         }
     ]
 }

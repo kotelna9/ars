@@ -18,7 +18,7 @@ export default function(operation, picUrl, direction) {
         currentAnimations.push('shift_right')
         showTransition()
     } else if (operation === 'backward') {
-        const backwardAnimation = direction === 'left' ? 'right' : 'left'
+        const backwardAnimation = 'shift_' + (direction === 'left' ? 'right' : 'left')
         currentAnimations.push(backwardAnimation)
         currentAnimations.push(backwardAnimation)
         showTransition()
@@ -54,6 +54,4 @@ export default function(operation, picUrl, direction) {
         nextLayer.classList.toggle('bg-switcher__next')
         nextLayer.classList.toggle('bg-switcher__current')
     }
-
-    console.log(currentAnimations)
 }
