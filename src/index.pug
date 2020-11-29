@@ -2,6 +2,7 @@ extends layout
 
 include components/bg-switcher/bg-switcher.pug
 include components/control-btns/control-btns.pug
+include components/units-space/units-space.pug
 
 block variables
   - var title = 'ars котельная'
@@ -13,4 +14,5 @@ block content
     +b.window-box
       +b.proportion-box
         +bg-switcher
+        +units-space
         +control-btns

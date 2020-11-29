@@ -10,7 +10,8 @@
                 "x": 9,
                 "y": 45
             },
-            "url": "images/0.jpg"
+            "url": "images/0.jpg",
+            "units": [ 0, 1, 2, 3, 4, 5 ]
         },
 		{
             "id": 1,

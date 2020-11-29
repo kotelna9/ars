@@ -8,17 +8,25 @@ const limits = {
 
 //подключение переключателя фона
 import bgSwitcher from '@comp/bg-switcher/bg-switcher'
+//подключение юнитов работ и артистов
+import unitsSpace from '@comp/units-space/units-space'
 //подключение управляющих кнопок
 import controlBtns from '@comp/control-btns/control-btns'
 
 //загрузка карты точек передвижения
 import map from '@data/map.json'
 const points = map.points
+//загрузка архива работ
+import archive from '@data/archive.json'
+const units = archive.units
 
 //инициализация переключателя на стартовой точке
 let currentPoint = 0
 let currentDirection = 'right'
 bgSwitcher('init', points[currentPoint].url)
+
+//
+unitsSpace(units, points[currentPoint].units)
 
 //задание обарботчиков для кнопок управления
 const ctrlBtn = controlBtns(points[currentPoint])
