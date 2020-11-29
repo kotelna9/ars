@@ -7,8 +7,8 @@
             "backward": 23,
             "forward": 11,
             "forwardPosition": {
-                "x": 250,
-                "y": 500
+                "x": 9,
+                "y": 45
             },
             "url": "images/0.jpg"
         },
@@ -39,8 +39,8 @@
             "backward": 9,
             "forward": 16,
             "forwardPosition": {
-                "x": 1150,
-                "y": 500
+                "x": 58,
+                "y": 40
             },
             "url": "images/4.jpg"
         },
@@ -50,8 +50,8 @@
             "left": 7,
             "forward": 15,
             "forwardPosition": {
-                "x": 550,
-                "y": 500
+                "x": 22,
+                "y": 42
             },
             "url": "images/5.jpg"
         },
@@ -69,8 +69,8 @@
             "backward": 6,
             "forward": 2,
             "forwardPosition": {
-                "x": 950,
-                "y": 250
+                "x": 45,
+                "y": 20
             },
             "url": "images/7.jpg"
         },
@@ -80,8 +80,8 @@
             "left": 4,
             "forward": 6,
             "forwardPosition": {
-                "x": 900,
-                "y": 350
+                "x": 47,
+                "y": 36
             },
             "url": "images/8.jpg"
         },
@@ -92,8 +92,8 @@
             "backward": 4,
             "forward": 0,
             "forwardPosition": {
-                "x": 1150,
-                "y": 200
+                "x": 50,
+                "y": 17
             },
             "url": "images/9.jpg"
         },
@@ -107,7 +107,6 @@
 		{
             "id": 11,
             "right": 12,
-            "left": 10,
             "backward": 23,
             "url": "images/11.jpg"
         },
@@ -120,15 +119,13 @@
         },
 		{
             "id": 13,
-            "right": 12,
             "left": 12,
             "backward": 14,
             "url": "images/13.jpg"
         },
 		{
             "id": 14,
-            "right": 12,
-            "left": 12,            
+            "right": 12,          
             "backward": 13,
             "url": "images/14.jpg"
         },
@@ -139,8 +136,8 @@
             "backward": 21,
             "forward": 17,
             "forwardPosition": {
-                "x": 1850,
-                "y": 200
+                "x": 91,
+                "y": 17
             },
             "url": "images/15.jpg"
         },
@@ -165,34 +162,31 @@
             "backward": 17,
             "forward": 21,
             "forwardPosition": {
-                "x": 1600,
-                "y": 200
+                "x": 80,
+                "y": 21
             },
             "url": "images/18.jpg"
         },
 		{
             "id": 19,
-            "right": 18,
             "left": 17,
             "backward": 15,
             "url": "images/19.jpg"
         },
 		{
             "id": 20,
-            "right": 21,
             "left": 22,
             "backward": 21,
             "forward": 15,
             "forwardPosition": {
-                "x": 1600,
-                "y": 600
+                "x": 79,
+                "y": 52
             },
             "url": "images/20.jpg"
         },
 		{
             "id": 21,
             "right": 22,
-            "left": 20,
             "backward": 20,
             "url": "images/21.jpg"
         },
@@ -209,8 +203,8 @@
             "backward": 0,
             "forward": 4,
             "forwardPosition": {
-                "x": 450,
-                "y": 400
+                "x": 20,
+                "y": 34
             },
             "url": "images/23.jpg"
         }

@@ -29,8 +29,8 @@ export default function(point) {
     }
 
     if (point.forwardPosition) {
-        forwardBtn.style.top = point.forwardPosition.y + 'px'
-        forwardBtn.style.left = point.forwardPosition.x + 'px'
+        forwardBtn.style.top = point.forwardPosition.y + '%'
+        forwardBtn.style.left = point.forwardPosition.x + '%'
     }
 
     return {
