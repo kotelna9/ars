@@ -12,6 +12,7 @@
         flex-direction: column;
         justify-content: center;
         padding: 10px;
+        z-index: 3;
         &_forward {
             position: absolute;
             min-width: 40px;

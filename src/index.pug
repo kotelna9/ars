@@ -3,6 +3,7 @@ extends layout
 include components/bg-switcher/bg-switcher.pug
 include components/control-btns/control-btns.pug
 include components/units-space/units-space.pug
+include components/pop-up-context/pop-up-context.pug
 
 block variables
   - var title = 'ars котельная'
@@ -15,4 +16,5 @@ block content
       +b.proportion-box
         +bg-switcher
         +units-space
+        +pop-up-context
         +control-btns

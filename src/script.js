@@ -10,6 +10,8 @@ const limits = {
 import bgSwitcher from '@comp/bg-switcher/bg-switcher'
 //подключение юнитов работ и артистов
 import unitsSpace from '@comp/units-space/units-space'
+//
+import popUpContext from '@comp/pop-up-context/pop-up-context'
 //подключение управляющих кнопок
 import controlBtns from '@comp/control-btns/control-btns'
 
@@ -23,17 +25,9 @@ const units = archive.units
 //инициализация переключателя на стартовой точке
 let currentPoint = 0
 let currentDirection = 'right'
-bgSwitcher('init', points[currentPoint].url)
-
-//
-unitsSpace(units, points[currentPoint].units)
 
 //задание обарботчиков для кнопок управления
 const ctrlBtn = controlBtns(points[currentPoint])
-ctrlBtn.right.addEventListener('click', () => {pointRouter('right')})
-ctrlBtn.left.addEventListener('click', () => {pointRouter('left')})
-ctrlBtn.backward.addEventListener('click', () => {pointRouter('backward')})
-ctrlBtn.forward.addEventListener('click', () => {pointRouter('forward')})
 
 //сохранять пропорции окна присутствия
 const proportionBox = document.querySelector('.proportion-box')
@@ -50,24 +44,60 @@ const setProportionHeight = () => {
         proportionBox.style.height = limits.minHeight + 'px'
     }
 }
-setProportionHeight()
-window.addEventListener('resize', setProportionHeight)
 
 //флаг блокировки кнопки при анимации переключения
 let isCtrlBloked = false
+const transitionTime = 1500
+
+// ИНИЦИАЛИЗАЦИЯ
+init()
+
+//
+function init() {
+    //
+    bgSwitcher('init', points[currentPoint].url)
+    //
+    showUnits()
+    //
+    ctrlBtn.right.addEventListener('click', () => {pointRouter('right')})
+    ctrlBtn.left.addEventListener('click', () => {pointRouter('left')})
+    ctrlBtn.backward.addEventListener('click', () => {pointRouter('backward')})
+    ctrlBtn.forward.addEventListener('click', () => {pointRouter('forward')})
+    //
+    setProportionHeight()
+    window.addEventListener('resize', () => {
+        setProportionHeight()
+        popUpContext(null)
+    })
+}
 
 //маршрутизация перемещения по карте с вызовом соответствующих переключателей и кнопок управления
 function pointRouter(direction) {
     if (!isCtrlBloked) {
         if (points[currentPoint][direction] !== undefined) {
             isCtrlBloked = true
-            setTimeout(() => {isCtrlBloked = false}, 1500)
+            setTimeout(() => {isCtrlBloked = false}, transitionTime)
             currentPoint = points[currentPoint][direction]
             currentDirection = direction !== 'backward' ? direction : currentDirection
             bgSwitcher(direction, points[currentPoint].url, currentDirection)
             controlBtns(points[currentPoint])
+            unitsSpace(null)
+            setTimeout(showUnits, transitionTime)
         } else {
             alert('ракурс недоступен')
         }
     }
+}
+
+//
+function showUnits() {
+    //
+    const unitBtns = unitsSpace(units, points[currentPoint].units)
+    unitBtns.forEach((unitBtn, index) => {
+        unitBtn.addEventListener('click', () => {
+            popUpContext(units[points[currentPoint].units[index]])
+        })
+    });
+    //
+    document.addEventListener('click', () => { popUpContext(null) }, true)
 }
