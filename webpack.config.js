@@ -18,6 +18,7 @@ const outputHTML = 'index.html'
 
 const imagesDir = 'images'
 const fontsDir = 'fonts'
+const extrasDir = 'extras'
 
 // const pagesDir = 'pages'
 // const pages = [
@@ -72,7 +73,10 @@ const plugins = () => {
         toHTMLPage(baseTemplate, outputHTML),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin({
-            patterns: [ { from: path.resolve(__dirname, `src/${imagesDir}/`), to: imagesDir } ]
+            patterns: [ 
+                { from: path.resolve(__dirname, `src/${imagesDir}/`), to: imagesDir }, 
+                { from: path.resolve(__dirname, `src/${extrasDir}/`), to: extrasDir }
+            ]
         }),
         // new webpack.ProvidePlugin({
         //     $: 'jquery',

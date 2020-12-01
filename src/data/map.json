@@ -10,16 +10,14 @@
                 "x": 23,
                 "y": 60
             },
-            "url": "images/0_0-min.jpg",
-            "units": [ 0, 1, 3, 5 ]
+            "url": "images/0_0-min.jpg"
         },
 		{
             "id": 1,
             "right": 2,
             "left": 0,
             "backward": 10,
-            "url": "images/0_1-min.jpg",
-            "units": [ 2, 4 ]
+            "url": "images/0_1-min.jpg"
         },
 				{
             "id": 2,

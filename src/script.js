@@ -12,6 +12,8 @@ import bgSwitcher from '@comp/bg-switcher/bg-switcher'
 import unitsSpace from '@comp/units-space/units-space'
 //
 import popUpContext from '@comp/pop-up-context/pop-up-context'
+//
+import eventSwitcher from '@comp/event-switcher/event-switcher'
 //подключение управляющих кнопок
 import controlBtns from '@comp/control-btns/control-btns'
 
@@ -20,7 +22,7 @@ import map from '@data/map.json'
 const points = map.points
 //загрузка архива работ
 import archive from '@data/archive.json'
-const units = archive.units
+const events = archive.events
 
 //инициализация переключателя на стартовой точке
 let currentPoint = 0
@@ -48,6 +50,9 @@ const setProportionHeight = () => {
 //флаг блокировки кнопки при анимации переключения
 let isCtrlBloked = false
 const transitionTime = 1500
+//
+const currentDate = '24.11.2019'
+let currentEvent = events.find(e => e.date === currentDate).id
 
 // ИНИЦИАЛИЗАЦИЯ
 init()
@@ -57,7 +62,31 @@ function init() {
     //
     bgSwitcher('init', points[currentPoint].url)
     //
+    const eventBtns = eventSwitcher(events)
+    eventBtns.forEach((btn, index) => {
+        btn.addEventListener('click', (e) => {
+            unitsSpace(null)
+            currentEvent = index
+            showUnits()
+
+            setDate()
+            select(e)
+        })
+    })
+    //
     showUnits()
+    //
+    setDate()
+    // выделяет кнопку (переделать)
+    select()
+    function select(e) {
+        document.querySelector('.event-switcher').querySelectorAll('.btn').forEach(btn => { btn.classList.remove('btn_selected') })
+        if (e) {
+            e.target.classList.add('btn_selected')
+        } else {
+            document.querySelector('.event-switcher').querySelectorAll('.btn')[currentEvent].classList.add('btn_selected')
+        }
+    }
     //
     ctrlBtn.right.addEventListener('click', () => {pointRouter('right')})
     ctrlBtn.left.addEventListener('click', () => {pointRouter('left')})
@@ -91,13 +120,19 @@ function pointRouter(direction) {
 
 //
 function showUnits() {
+    const units = events[currentEvent].units.filter(unit => unit.location === currentPoint)
     //
-    const unitBtns = unitsSpace(units, points[currentPoint].units)
+    const unitBtns = unitsSpace(units)
     unitBtns.forEach((unitBtn, index) => {
         unitBtn.addEventListener('click', () => {
-            popUpContext(units[points[currentPoint].units[index]])
+            popUpContext(units[index])
         })
     });
     //
     document.addEventListener('click', () => { popUpContext(null) }, true)
+}
+
+function setDate() {
+    const dateElem = document.querySelector('.date')
+    dateElem.innerText = 'дата отображаемого события: ' + events[currentEvent].date
 }

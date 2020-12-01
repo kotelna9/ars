@@ -1,27 +1,25 @@
 import './units-space.scss'
 
-export default function(units, usedUnits) {
+export default function(units) {
     const unitsContainer = document.querySelector('.units-space')
     if(units !== null) {
         const unitBtns = []
-        if (usedUnits) {
-            usedUnits.forEach(unitId => {
-                const unit = document.createElement("li")
-                unit.classList.add('unit')
-                unit.style.backgroundImage = `url(${units[unitId].pic})`
-                unit.style.left = units[unitId].x + '%'
-                unit.style.top = units[unitId].y + '%'
-                unit.style.width = units[unitId].width + '%'
-                unit.style.height = units[unitId].height + '%'
+        units.forEach(unit => {
+            const unitElem = document.createElement("li")
+            unitElem.classList.add('unit')
+            unitElem.style.backgroundImage = `url(${unit.pic})`
+            unitElem.style.left = unit.x + '%'
+            unitElem.style.top = unit.y + '%'
+            unitElem.style.width = unit.width + '%'
+            unitElem.style.height = unit.height + '%'
 
-                const unitBtn = document.createElement("button")
-                unitBtn.classList.add('unit__btn')
-                unitBtns.push(unitBtn)
+            const unitBtn = document.createElement("button")
+            unitBtn.classList.add('unit__btn')
+            unitBtns.push(unitBtn)
 
-                unit.append(unitBtn)
-                unitsContainer.append(unit)
-            });
-        }
+            unitElem.append(unitBtn)
+            unitsContainer.append(unitElem)
+        });
         return unitBtns
     } else {
         unitsContainer.innerHTML = ''

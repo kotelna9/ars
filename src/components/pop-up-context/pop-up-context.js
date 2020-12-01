@@ -29,7 +29,8 @@ function createArticle(unit) {
     footer.classList.add('explication__author')
 
     title.innerText = unit.name
-    body.innerText = unit.description
+    body.innerText = unit.description ? unit.description : unit.pdf ? '' : 'Без описания'
+    body.innerHTML = body.innerHTML + (unit.pdf ? `<p><a href="${unit.pdf}" target="_blank">Открыть экспликацию в pdf</a></p>` : '')
     footer.innerHTML = '<a href="https://ru.wikipedia.org/wiki/Служебная:Случайная_страница" target="_blank">'+unit.author+'</a>'
 
     article.append(title)
@@ -48,6 +49,4 @@ function positionIn(box) {
         box.style.left = (box.offsetLeft - ((box.offsetTop + box.offsetHeight) - window.screen.height) - boxMargin*2) < 0 ? 0 + 'px' :
             (((box.offsetTop + box.offsetHeight) - window.screen.height) - boxMargin*2) + 'px'
     }
-    console.log(box.offsetParent.offsetWidth)
-    console.log(window.screen.width)
 }

@@ -4,6 +4,7 @@ include components/bg-switcher/bg-switcher.pug
 include components/control-btns/control-btns.pug
 include components/units-space/units-space.pug
 include components/pop-up-context/pop-up-context.pug
+include components/event-switcher/event-switcher.pug
 
 block variables
   - var title = 'ars котельная'
@@ -11,10 +12,12 @@ block variables
 
 block content
     +b.H1.title ars котельная
-    +b.p.test экспериментальная разработка
+    +b.P.test экспериментальная разработка
+    +b.date
     +b.window-box
       +b.proportion-box
         +bg-switcher
         +units-space
+        +event-switcher
         +pop-up-context
         +control-btns

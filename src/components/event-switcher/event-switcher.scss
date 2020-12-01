@@ -1,0 +1,31 @@
+.event-switcher {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 60px;
+    padding-top: 0;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    .btn {
+        position: relative;
+        z-index: 4;
+        min-height: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: rgba(0, 0, 0, 0.411);
+        border-radius: 10px;
+        padding: 10px 15px;
+        text-transform: uppercase;
+        color: white;
+        &:hover {
+            // background-color: rgba(0, 0, 0, 0.219);
+            background-color: rgba(0, 139, 139, 0.274);
+            background-color: rgba(0, 139, 139, 0.432);
+        }
+        &_selected {
+            background-color: rgba(0, 139, 139, 0.432);
+        }
+    }
+}
