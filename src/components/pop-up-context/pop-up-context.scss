@@ -9,7 +9,7 @@
         margin: 40px;
         max-width: 800px;
         min-width: 300px;
-        background-color: transparent;
+        background-color: rgba(255, 255, 255, 0.349);
         border-radius: 5px;
         box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
         z-index: 4;
@@ -25,13 +25,14 @@
             text-transform: uppercase;
             line-height: 20px;
         }
-        &__description {
+        &__part {
             text-align: justify;
         }
         &__author {
-            margin-top: 5px;
             font-style: italic;
-            text-align: right;
+        }
+        &__footer {
+            margin-top: 5px;
         }
     }
 }

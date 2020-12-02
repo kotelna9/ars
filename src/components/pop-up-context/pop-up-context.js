@@ -19,23 +19,42 @@ export default function(unit) {
 
 function createArticle(unit) {
     const article = document.createElement('article')
-    const title = document.createElement('h2')
-    const body = document.createElement('p')
-    const footer = document.createElement('p')
-
     article.classList.add('explication')
-    title.classList.add('explication__name')
-    body.classList.add('explication__description')
-    footer.classList.add('explication__author')
 
-    title.innerText = unit.name
-    body.innerText = unit.description ? unit.description : unit.pdf ? '' : 'Без описания'
-    body.innerHTML = body.innerHTML + (unit.pdf ? `<p><a href="${unit.pdf}" target="_blank">Открыть экспликацию в pdf</a></p>` : '')
-    footer.innerHTML = '<a href="https://ru.wikipedia.org/wiki/Служебная:Случайная_страница" target="_blank">'+unit.author+'</a>'
+    if (unit.name) {
+        const title = document.createElement('h2')
+        title.classList.add('explication__name')
+        title.innerText = unit.name
+        article.append(title)
+    }
 
-    article.append(title)
-    article.append(body)
-    article.append(footer)
+    if (unit.description) {
+        const part = document.createElement('p')
+        part.classList.add('explication__part')
+        part.innerText = unit.description
+        article.append(part)
+    }
+
+    if (unit.author) {
+        if (unit.contact) {
+            const author = document.createElement('p')
+            author.classList.add('explication__author')
+            author.innerHTML = `Автор: <a href="${unit.contact}" target="_blank">${unit.author}</a>`
+            article.append(author)
+        } else {
+            const author = document.createElement('p')
+            author.classList.add('explication__author')
+            author.innerText = 'Автор: ' + unit.author
+            article.append(author)
+        }
+    }
+
+    if (unit.pdf) {
+        const part = document.createElement('p')
+        part.classList.add('explication__footer')
+        part.innerHTML = `<a href="${unit.pdf}" target="_blank">Открыть экспликацию в pdf</a>`
+        article.append(part)
+    }
 
     return article
 }

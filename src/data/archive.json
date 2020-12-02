@@ -107,7 +107,7 @@
 					"height": 8,
 					"pic": "images/u6.jpg",
                     "name": "Мальчик из лесной чащи",
-                    "pdf": "extras/forestboy.pdf",
+                    "pdf": "downloads/forestboy.pdf",
 					"author": "Мефодий Лоскутников"
                 },
                 {
@@ -131,10 +131,95 @@
 					"pic": "images/u8.jpg",
                     "name": "Забытая история",
                     "description": "В мире, где все рождаются со сверхспособностями, у вас самая опасная работа, воспитатель в детском саду.",
-                    "pdf": "extras/fstory.pdf",
+                    "pdf": "downloads/fstory.pdf",
 					"author": "Гордон Букин"
 				}
             ]
-        }
+		},
+		{
+			"id": 4,
+			"name": "зло I",
+			"description": "зло в нескольких частях:\n I - 28.04 в 18.00, выставка\n II - 09.05, афтепати и ритуал\n III - 11.05 с 15.00 до 21.00, батл плакатов монстрации и котельной\n IV - 12.05 в 18.00, группа Strong and Dangerous Tiger Company, перформанс \"а не пора ли баиньки? сладеньких снов!\"\n V - 26.05 в 20.00, злой текст\n VI - демонтаж",
+			"date": "28.04.2019",
+			"pdf": "downloads/zlo.pdf",
+			"event": "https://vk.com/evil_event",
+			"units": [
+				{
+					"id": 0,
+					"location": 11,
+					"x": 45,
+					"y": 17,
+					"pic": "images/z0.png",
+                    "pdf": "downloads/zlo-sarycheva-veronika.pdf",
+					"author": "Вероника Сарычева",
+					"contact": "https://vk.com/nika.rona"  
+				},
+				{
+					"id": 1,
+					"location": 14,
+					"x": 89,
+					"y": 56,
+					"pic": "images/z1.png",
+                    "pdf": "downloads/zlo-butkovskaya.pdf",
+					"author": "Ирина Бутковская",
+					"contact": "https://vk.com/no_life_without_a_gf"
+				},
+				{
+					"id": 2,
+					"location": 1,
+					"x": 63,
+					"y": 44,
+					"pic": "images/z2.png",
+					"name": "Колыбельная",
+					"description": "плакат по мотивам Всеволода Некрасова\n если ты чего-то боишься --читай стишок!",
+                    "pdf": "downloads/zlo-butkovskaya.pdf",
+					"author": "Ирина Бутковская",
+					"contact": "https://vk.com/no_life_without_a_gf"
+				},
+				{
+					"id": 3,
+					"location": 17,
+					"x": 6,
+					"y": 25,
+					"pic": "images/z3.png",
+					"description": "Зло на залупе зло, и большего о нём сказано быть может. Частушки делают это настолько, насколько не могут",
+                    "pdf": "downloads/zlo-ignatenko.pdf",
+					"author": "Владислав Игнатенко"
+				},
+				{
+					"id": 4,
+					"location": 0,
+					"x": 60,
+					"y": 54,
+					"pic": "images/z4.png",
+					"name": "БДСМ-SLESARKA",
+                    "pdf": "downloads/zlo-kurmanaev.pdf",
+					"author": "Тимур Курманаев",
+					"contact": "https://vk.com/auracore"
+				},
+				{
+					"id": 5,
+					"location": 2,
+					"x": 60,
+					"y": 60,
+					"pic": "images/z5.png",
+                    "pdf": "downloads/zlo-sarycheva-aksinya.pdf",
+					"author": "Аксинья Сарычева",
+					"contact": "https://vk.com/aksinyabuzzard"
+				},
+				{
+					"id": 6,
+					"location": 0,
+					"x": 18,
+					"y": 56,
+					"pic": "images/z6.png",
+					"name": "61 ч/б ферзь и белая пешка на e2 со свободным ходом на e4",
+					"description": "Игра навязывает первый ход и понимание того что дальше ничего хорошего для всех участников игры",
+                    "pdf": "downloads/zlo-smolkov.pdf",
+					"author": "Игорь Смольков",
+					"contact": "https://vk.com/nonumbervision"
+				}
+			]
+		}
 	]
 }

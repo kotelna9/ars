@@ -69,14 +69,14 @@ function init() {
             currentEvent = index
             showUnits()
 
-            setDate()
+            setEventInfo()
             select(e)
         })
     })
     //
     showUnits()
     //
-    setDate()
+    setEventInfo()
     // выделяет кнопку (переделать)
     select()
     function select(e) {
@@ -132,7 +132,14 @@ function showUnits() {
     document.addEventListener('click', () => { popUpContext(null) }, true)
 }
 
-function setDate() {
-    const dateElem = document.querySelector('.date')
-    dateElem.innerText = 'дата отображаемого события: ' + events[currentEvent].date
+function setEventInfo() {
+    const descriptionElem = document.querySelector('.event-info__description')
+    const pdfLinkElem = document.querySelector('.event-info__pdf-link')
+    const eventLinkElem = document.querySelector('.event-info__event-link')
+    const dateElem = document.querySelector('.event-info__date')
+
+    descriptionElem.innerText = events[currentEvent].description ? events[currentEvent].description : ''
+    pdfLinkElem.innerHTML = events[currentEvent].pdf ? `<a href="${events[currentEvent].pdf}"  target="_blank">Экспилкация события в pdf</a>` : ''
+    eventLinkElem.innerHTML = events[currentEvent].event ? `<a href="${events[currentEvent].event}"  target="_blank">Ссылка на встречу</a>` : ''
+    dateElem.innerText = 'дата события: ' + events[currentEvent].date
 }

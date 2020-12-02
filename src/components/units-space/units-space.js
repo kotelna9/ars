@@ -10,8 +10,12 @@ export default function(units) {
             unitElem.style.backgroundImage = `url(${unit.pic})`
             unitElem.style.left = unit.x + '%'
             unitElem.style.top = unit.y + '%'
-            unitElem.style.width = unit.width + '%'
-            unitElem.style.height = unit.height + '%'
+            unitElem.style.width = unit.width ? unit.width + '%' : 'auto'
+            unitElem.style.height = unit.height ? unit.height + '%' : 'auto'
+
+            const unitPic = document.createElement("img")
+            unitPic.src = unit.pic
+            unitElem.append(unitPic)
 
             const unitBtn = document.createElement("button")
             unitBtn.classList.add('unit__btn')

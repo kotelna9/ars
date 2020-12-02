@@ -18,7 +18,7 @@ const outputHTML = 'index.html'
 
 const imagesDir = 'images'
 const fontsDir = 'fonts'
-const extrasDir = 'extras'
+const extrasDir = 'downloads'
 
 // const pagesDir = 'pages'
 // const pages = [
