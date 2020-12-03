@@ -6,6 +6,8 @@ const limits = {
     maxHeight: 969
 }
 
+//
+import eventInfo from '@comp/event-info/event-info'
 //подключение переключателя фона
 import bgSwitcher from '@comp/bg-switcher/bg-switcher'
 //подключение юнитов работ и артистов
@@ -51,7 +53,7 @@ const setProportionHeight = () => {
 let isCtrlBloked = false
 const transitionTime = 1500
 //
-const currentDate = '24.11.2019'
+const currentDate = '28.04.2019'
 let currentEvent = events.find(e => e.date === currentDate).id
 
 // ИНИЦИАЛИЗАЦИЯ
@@ -69,14 +71,21 @@ function init() {
             currentEvent = index
             showUnits()
 
-            setEventInfo()
+            eventInfo(events[currentEvent])
             select(e)
         })
     })
     //
     showUnits()
     //
-    setEventInfo()
+    eventInfo(events[currentEvent])
+    //
+    proportionBox.addEventListener('click', () => {
+        const eventInfoBtn = eventInfo(events[currentEvent].name)
+        eventInfoBtn.addEventListener('click', () => {
+            eventInfo(events[currentEvent])
+        })
+    }, true)
     // выделяет кнопку (переделать)
     select()
     function select(e) {
@@ -130,16 +139,4 @@ function showUnits() {
     });
     //
     document.addEventListener('click', () => { popUpContext(null) }, true)
-}
-
-function setEventInfo() {
-    const descriptionElem = document.querySelector('.event-info__description')
-    const pdfLinkElem = document.querySelector('.event-info__pdf-link')
-    const eventLinkElem = document.querySelector('.event-info__event-link')
-    const dateElem = document.querySelector('.event-info__date')
-
-    descriptionElem.innerText = events[currentEvent].description ? events[currentEvent].description : ''
-    pdfLinkElem.innerHTML = events[currentEvent].pdf ? `<a href="${events[currentEvent].pdf}"  target="_blank">Экспилкация события в pdf</a>` : ''
-    eventLinkElem.innerHTML = events[currentEvent].event ? `<a href="${events[currentEvent].event}"  target="_blank">Ссылка на встречу</a>` : ''
-    dateElem.innerText = 'дата события: ' + events[currentEvent].date
 }

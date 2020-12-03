@@ -19,41 +19,42 @@ export default function(unit) {
 
 function createArticle(unit) {
     const article = document.createElement('article')
-    article.classList.add('explication')
+    article.classList.add('article')
 
-    if (unit.name) {
+    if (unit.title) {
         const title = document.createElement('h2')
-        title.classList.add('explication__name')
-        title.innerText = unit.name
+        title.classList.add('article__title')
+        title.innerText = unit.title
         article.append(title)
     }
 
     if (unit.description) {
-        const part = document.createElement('p')
-        part.classList.add('explication__part')
-        part.innerText = unit.description
-        article.append(part)
+        const section = document.createElement('p')
+        section.classList.add('article__section')
+        section.innerText = unit.description
+        article.append(section)
     }
 
     if (unit.author) {
-        if (unit.contact) {
-            const author = document.createElement('p')
-            author.classList.add('explication__author')
-            author.innerHTML = `Автор: <a href="${unit.contact}" target="_blank">${unit.author}</a>`
-            article.append(author)
-        } else {
-            const author = document.createElement('p')
-            author.classList.add('explication__author')
-            author.innerText = 'Автор: ' + unit.author
-            article.append(author)
-        }
+        const section = document.createElement('p')
+        section.classList.add('article__section')
+        section.innerText = unit.author
+        article.append(section)
     }
 
-    if (unit.pdf) {
-        const part = document.createElement('p')
-        part.classList.add('explication__footer')
-        part.innerHTML = `<a href="${unit.pdf}" target="_blank">Открыть экспликацию в pdf</a>`
-        article.append(part)
+    if (unit.links) {
+        unit.links.forEach(link => {
+            const section = document.createElement('p')
+            section.classList.add('article__section')
+
+            const linkElem = document.createElement('a')
+            linkElem.href = link.url
+            linkElem.target = '_blank'
+            linkElem.innerText = link.label ? link.label : link.url
+
+            section.append(linkElem)
+            article.append(section)
+        });
     }
 
     return article

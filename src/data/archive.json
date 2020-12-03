@@ -2,147 +2,20 @@
 	"events" : [
 		{
 			"id": 0,
-			"name": "Знаменитые воины современности",
-			"date": "29.06.2019",
-			"units": [
-				{
-					"id": 0,
-					"location": 0,
-					"x": 23,
-					"y": 13,
-					"width": 4,
-					"height": 8,
-					"pic": "images/u0.jpg",
-					"name": "Сохранить себя",
-					"description": "Вы провели всю свою жизнь среди гномов, добывали золото, пили мед и бились с орками. До того дня, когда вы обнаружите, что вы просто человек с карлизмом.",
-					"author": "Марианна Добрынина"
-				},
-				{
-					"id": 1,
-					"location": 0,
-					"x": 65,
-					"y": 13,
-					"width": 4,
-					"height": 8,
-					"pic": "images/u1.jpg",
-					"name": "Остаться до завтра",
-					"description": "Когда гг возвращалась из университета, она получила пулевое ранение.Она впала в кому (это не упоминается практически до конца книги). Через определенное время она открывает глаза, но не на больничной койке – а в роскошных покоях. Она дочь эльфийского герцога из новеллы, которую прочитала накануне. И помогает принцу справиться с заговором против него. Влюбившись в него, она очнулась.",
-					"author": "Григорий Шестаков"
-				}
-			]
-		},
-		{
-			"id": 1,
-			"name": "Ассимиляция",
-			"date": "24.11.2019",
-			"units": [
-				{
-					"id": 0,
-					"location": 0,
-					"x": 40,
-					"y": 13,
-					"width": 4,
-					"height": 8,
-					"pic": "images/u2.jpg",
-					"name": "Каменное сердце",
-					"description": "Тайная китайская миссия на Луну находит останки всех предыдущих астронавтов Аполлона. Тот, у которого тег Армстронг держит записку, написанную в спешке. «Они похожи на нас, но они не мы, не доверяйте им»",
-					"author": "Ксения Александрова"
-				},
-				{
-					"id": 1,
-					"location": 1,
-					"x": 24,
-					"y": 30,
-					"width": 4,
-					"height": 8,
-					"pic": "images/u3.jpg",
-					"name": "Осколки прошлого",
-					"description": "После нескольких лет боев ваше тело поддалось раку, который распространился внутри. Вы изо всех сил пытаетесь дышать, в окружении ваших близких. Когда все исчезает до темноты, вы слышите роботизированный речевой отчет: «Симуляция не удалась».",
-					"author": "Иван Иванов"
-				}
-			]
-		},
-		{
-			"id": 2,
-			"name": "Мой сладкий кипарис",
-			"date": "04.12.2018",
-			"units": [
-				{
-					"id": 0,
-					"location": 1,
-					"x": 30,
-					"y": 35,
-					"width": 4,
-					"height": 8,
-					"pic": "images/u4.jpg",
-					"name": "Игра в драконьих когтях",
-					"description": "Обычная девушка днем, обычная девушка ночью. Эмили действительно нужно хобби.",
-					"author": "Екатерина Волкова"
-				},
-				{
-					"id": 1,
-					"location": 1,
-					"x": 70,
-					"y": 30,
-					"width": 4,
-					"height": 16,
-					"pic": "images/u5.jpg",
-					"name": "Секрет Луны",
-					"description": "\"Вставай. Мы должны исправить историю\".",
-					"author": "Михаил Волков"
-				}
-			]
-        },
-        {
-			"id": 3,
-			"name": "Нарисованное небо",
-			"date": "06.01.2020",
-			"units": [
-                {
-					"id": 0,
-					"location": 10,
-					"x": 50,
-					"y": 50,
-					"width": 4,
-					"height": 8,
-					"pic": "images/u6.jpg",
-                    "name": "Мальчик из лесной чащи",
-                    "pdf": "downloads/forestboy.pdf",
-					"author": "Мефодий Лоскутников"
-                },
-                {
-					"id": 1,
-					"location": 10,
-					"x": 70,
-					"y": 70,
-					"width": 4,
-					"height": 8,
-					"pic": "images/u7.jpg",
-                    "name": "Песнопения богов смерти",
-					"author": "Велор Зубов"
-                },
-                {
-					"id": 2,
-					"location": 10,
-					"x": 30,
-					"y": 30,
-					"width": 4,
-					"height": 8,
-					"pic": "images/u8.jpg",
-                    "name": "Забытая история",
-                    "description": "В мире, где все рождаются со сверхспособностями, у вас самая опасная работа, воспитатель в детском саду.",
-                    "pdf": "downloads/fstory.pdf",
-					"author": "Гордон Букин"
-				}
-            ]
-		},
-		{
-			"id": 4,
 			"name": "зло I",
 			"description": "зло в нескольких частях:\n I - 28.04 в 18.00, выставка\n II - 09.05, афтепати и ритуал\n III - 11.05 с 15.00 до 21.00, батл плакатов монстрации и котельной\n IV - 12.05 в 18.00, группа Strong and Dangerous Tiger Company, перформанс \"а не пора ли баиньки? сладеньких снов!\"\n V - 26.05 в 20.00, злой текст\n VI - демонтаж",
 			"date": "28.04.2019",
-			"pdf": "downloads/zlo.pdf",
-			"event": "https://vk.com/evil_event",
+			"curator": "ars котельная",
+			"links": [
+				{
+					"label": "Экспликация выставки в pdf",
+					"url": "downloads/zlo.pdf"
+				},
+				{
+					"label": "Ссылка на встречу",
+					"url": "https://vk.com/evil_event"
+				}
+			],
 			"units": [
 				{
 					"id": 0,
@@ -150,9 +23,16 @@
 					"x": 45,
 					"y": 17,
 					"pic": "images/z0.png",
-                    "pdf": "downloads/zlo-sarycheva-veronika.pdf",
-					"author": "Вероника Сарычева",
-					"contact": "https://vk.com/nika.rona"  
+					"links": [
+						{
+							"label": "Вероника Сарычева",
+							"url": "https://vk.com/nika.rona"
+						},
+						{
+							"label": "Экспликация в pdf",
+							"url": "downloads/zlo-sarycheva-veronika.pdf"
+						}
+					]  
 				},
 				{
 					"id": 1,
@@ -160,9 +40,16 @@
 					"x": 89,
 					"y": 56,
 					"pic": "images/z1.png",
-                    "pdf": "downloads/zlo-butkovskaya.pdf",
-					"author": "Ирина Бутковская",
-					"contact": "https://vk.com/no_life_without_a_gf"
+					"links": [
+						{
+							"label": "Ирина Бутковская",
+							"url": "https://vk.com/no_life_without_a_gf"
+						},
+						{
+							"label": "Экспликация в pdf",
+							"url": "downloads/zlo-butkovskaya.pdf"
+						}
+					]
 				},
 				{
 					"id": 2,
@@ -170,11 +57,18 @@
 					"x": 63,
 					"y": 44,
 					"pic": "images/z2.png",
-					"name": "Колыбельная",
+					"title": "Колыбельная",
 					"description": "плакат по мотивам Всеволода Некрасова\n если ты чего-то боишься --читай стишок!",
-                    "pdf": "downloads/zlo-butkovskaya.pdf",
-					"author": "Ирина Бутковская",
-					"contact": "https://vk.com/no_life_without_a_gf"
+					"links": [
+						{
+							"label": "Ирина Бутковская",
+							"url": "https://vk.com/no_life_without_a_gf"
+						},
+						{
+							"label": "Экспликация в pdf",
+							"url": "downloads/zlo-butkovskaya.pdf"
+						}
+					]
 				},
 				{
 					"id": 3,
@@ -183,8 +77,13 @@
 					"y": 25,
 					"pic": "images/z3.png",
 					"description": "Зло на залупе зло, и большего о нём сказано быть может. Частушки делают это настолько, насколько не могут",
-                    "pdf": "downloads/zlo-ignatenko.pdf",
-					"author": "Владислав Игнатенко"
+					"author": "Владислав Игнатенко",
+					"links": [
+						{
+							"label": "Экспликация в pdf",
+							"url": "downloads/zlo-ignatenko.pdf"
+						}
+					]
 				},
 				{
 					"id": 4,
@@ -192,10 +91,17 @@
 					"x": 60,
 					"y": 54,
 					"pic": "images/z4.png",
-					"name": "БДСМ-SLESARKA",
-                    "pdf": "downloads/zlo-kurmanaev.pdf",
-					"author": "Тимур Курманаев",
-					"contact": "https://vk.com/auracore"
+					"title": "БДСМ-SLESARKA",
+					"links": [
+						{
+							"label": "Тимур Курманаев",
+							"url": "https://vk.com/auracore"
+						},
+						{
+							"label": "Экспликация в pdf",
+							"url": "downloads/zlo-kurmanaev.pdf"
+						}
+					]
 				},
 				{
 					"id": 5,
@@ -203,9 +109,16 @@
 					"x": 60,
 					"y": 60,
 					"pic": "images/z5.png",
-                    "pdf": "downloads/zlo-sarycheva-aksinya.pdf",
-					"author": "Аксинья Сарычева",
-					"contact": "https://vk.com/aksinyabuzzard"
+					"links": [
+						{
+							"label": "Аксинья Сарычева",
+							"url": "https://vk.com/aksinyabuzzard"
+						},
+						{
+							"label": "Экспликация в pdf",
+							"url": "downloads/zlo-sarycheva-aksinya.pdf"
+						}
+					]
 				},
 				{
 					"id": 6,
@@ -213,11 +126,95 @@
 					"x": 18,
 					"y": 56,
 					"pic": "images/z6.png",
-					"name": "61 ч/б ферзь и белая пешка на e2 со свободным ходом на e4",
+					"title": "61 ч/б ферзь и белая пешка на e2 со свободным ходом на e4",
 					"description": "Игра навязывает первый ход и понимание того что дальше ничего хорошего для всех участников игры",
-                    "pdf": "downloads/zlo-smolkov.pdf",
-					"author": "Игорь Смольков",
-					"contact": "https://vk.com/nonumbervision"
+					"links": [
+						{
+							"label": "Игорь Смольков",
+							"url": "https://vk.com/nonumbervision"
+						},
+						{
+							"label": "Экспликация в pdf",
+							"url": "downloads/zlo-smolkov.pdf"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "Уголь",
+			"description": "Уголь-уголь-уголь.\nОн даёт жар, энергию, жизнь.\nЖар может отнимать жизнь.\nЭнергия двигает прогресс.\n\nМы живём во время прогресса.\nВремя, когда жизнь стоит на втором месте.\nНо день рождения — праздник (?) жизни. Он всегда современен и актуален. Сегодня особенно.",
+			"date": "20.07.2019",
+			"curator": "Аксиома",
+			"links": [
+				{
+					"label": "Ссылка на встречу",
+					"url": "https://vk.com/coalfest"
+				},
+				{
+					"label": "Фотоальбом встречи",
+					"url": "https://vk.com/album-184387440_264444382"
+				},
+				{
+					"label": "Сайт организатора",
+					"url": "http://axioma.press/"
+				},
+				{
+					"label": "Паблик организатора",
+					"url": "https://vk.com/axioma.press"
+				}
+			],
+			"units": [
+				{
+					"id": 0,
+					"location": 0,
+					"x": 40,
+					"y": 66,
+					"pic": "images/c0.png",
+					"description": "Выступление музыкальной группы",
+					"links": [
+						{
+							"label": "Смех Зелибобы",
+							"url": "https://vk.com/ulitsafuzzam"
+						}
+					]
+				},
+				{
+					"id": 1,
+					"location": 0,
+					"x": 30,
+					"y": 66,
+					"pic": "images/c1.png",
+					"description": "Выступление поэта",
+					"links": [
+						{
+							"label": "Андрей Янкус",
+							"url": "https://vk.com/jahnkus"
+						},
+						{
+							"label": "Янкус.txt",
+							"url": "https://vk.com/jankus_txt"
+						}
+					]
+				},
+				{
+					"id": 2,
+					"location": 0,
+					"x": 60,
+					"y": 66,
+					"pic": "images/c2.png",
+					"description": "Выступление поэта и музыканта",
+					"links": [
+						{
+							"label": "Саша Огородников",
+							"url": "https://vk.com/sogorodnikov"
+						},
+						{
+							"label": "саша огородников",
+							"url": "https://vk.com/ogorodnikovmusic"
+						}
+					]
 				}
 			]
 		}
