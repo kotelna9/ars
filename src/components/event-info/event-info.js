@@ -27,11 +27,15 @@ export default function(info) {
 function createLine (content) {
     const line = document.createElement('p')
     if (content.url) {
+        if (!content.embed) {
         const link = document.createElement('a')
         link.href = content.url
         link.target = '_blank'
         link.innerText = content.label ? content.label : content.url
         line.append(link)
+        } else {
+            line.innerHTML = `<iframe width="${content.width}" height="${content.height}" src="https://www.youtube.com/embed/${content.url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        }
     } else {
         line.innerText = content.label ? content.label : content
     }

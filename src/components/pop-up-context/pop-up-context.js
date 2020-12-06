@@ -45,14 +45,30 @@ function createArticle(unit) {
     if (unit.links) {
         unit.links.forEach(link => {
             const section = document.createElement('p')
-            section.classList.add('article__section')
+            if (!link.embed) {
+                section.classList.add('article__section')
 
-            const linkElem = document.createElement('a')
-            linkElem.href = link.url
-            linkElem.target = '_blank'
-            linkElem.innerText = link.label ? link.label : link.url
+                const linkElem = document.createElement('a')
+                linkElem.href = link.url
+                linkElem.target = '_blank'
+                linkElem.innerText = link.label ? link.label : link.url
 
-            section.append(linkElem)
+                section.append(linkElem)
+            } else {
+                if (link.embed === 'youtube') {
+                    section.innerHTML = `<iframe width="${link.width}" height="${link.height}" src="https://www.youtube.com/embed/${link.url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+                } else if (link.embed === 'spotify') {
+                    section.innerHTML = `<iframe src="https://open.spotify.com/embed/track/${link.url}" width="${link.width}" height="${link.height}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
+                } else if (link.embed === 'yandex') {
+                    if (link.list) {
+                        section.innerHTML = `<iframe frameborder="0"  width="100%" height="450" src="https://music.yandex.ru/iframe/#playlist/${link.url}"></iframe>`
+                    } else {
+                        section.innerHTML = `<iframe frameborder="0" width="100%" height="80" src="https://music.yandex.ru/iframe/#track/${link.url}"></iframe>`
+                    }
+                } else {
+                    section.innerHTML = `<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/${link.url}?autoplay=1&loop=1&color=ff0179&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>`
+                }
+            }
             article.append(section)
         });
     }
