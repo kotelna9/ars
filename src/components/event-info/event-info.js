@@ -14,14 +14,20 @@ export default function(info) {
 
     if (info.description)
         container.append(createLine(info.description))
-    if (info.date)
-        container.append(createLine(info.date))
     if (info.curator)
         container.append(createLine(info.curator))
     if (info.links)
-        info.links.forEach(link => {
-            container.append(createLine(link))
+        info.links.forEach((link, index) => {
+            const linkElement = createLine(link);
+            if (index === 0) { linkElement.classList.add('link_first'); }
+            container.append(linkElement);
         });
+    
+    if (info.date) {
+        const date = createLine(info.date);
+        date.classList.add('date')
+        container.append(date)
+    }
 }
 
 function createLine (content) {
@@ -33,8 +39,13 @@ function createLine (content) {
         link.target = '_blank'
         link.innerText = content.label ? content.label : content.url
         line.append(link)
-        } else {
+        } else if (content.embed === 'youtube') {
             line.innerHTML = `<iframe width="${content.width}" height="${content.height}" src="https://www.youtube.com/embed/${content.url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        } else {
+            const frame = document.createElement('iframe');
+            frame.src = content.url;
+            // frame.setAttribute('src', content.url);
+            line.append(frame);
         }
     } else {
         line.innerText = content.label ? content.label : content

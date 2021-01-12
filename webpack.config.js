@@ -154,7 +154,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(ttf|woff|otf|eot|svg|woff2)$/,
+                test: /\.(ttf|woff|otf|eot|woff2)$/,
                 loader: 'file-loader',
                 options: {
                   name: `${fontsDir}/${filename('[ext]')}`,

@@ -16,7 +16,12 @@
         text-transform: uppercase;
         &:hover {
             // background-color: rgba(0, 139, 139, 0.137);
-            border-bottom: 2px solid rgba(0, 139, 139, 0.199);
+            border-bottom: 2px solid rgb(226, 226, 236);
         }
+    }
+
+    .link_first,
+    .date {
+        margin-top: 10px;
     }
 }

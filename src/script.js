@@ -15,7 +15,7 @@ import unitsSpace from '@comp/units-space/units-space'
 //
 import popUpContext from '@comp/pop-up-context/pop-up-context'
 //
-import eventSwitcher from '@comp/event-switcher/event-switcher'
+// import eventSwitcher from '@comp/event-switcher/event-switcher'
 //подключение управляющих кнопок
 import controlBtns from '@comp/control-btns/control-btns'
 
@@ -53,7 +53,7 @@ const setProportionHeight = () => {
 let isCtrlBloked = false
 const transitionTime = 1500
 //
-const currentDate = '28.04.2019'
+const currentDate = '01-28 февраля 2021'
 let currentEvent = events.find(e => e.date === currentDate).id
 
 // ИНИЦИАЛИЗАЦИЯ
@@ -64,17 +64,17 @@ function init() {
     //
     bgSwitcher('init', points[currentPoint].url)
     //
-    const eventBtns = eventSwitcher(events)
-    eventBtns.forEach((btn, index) => {
-        btn.addEventListener('click', (e) => {
-            unitsSpace(null)
-            currentEvent = index
-            showUnits()
+    // const eventBtns = eventSwitcher(events)
+    // eventBtns.forEach((btn, index) => {
+    //     btn.addEventListener('click', (e) => {
+    //         unitsSpace(null)
+    //         currentEvent = index
+    //         showUnits()
 
-            eventInfo(events[currentEvent])
-            select(e)
-        })
-    })
+    //         eventInfo(events[currentEvent])
+    //         select(e)
+    //     })
+    // })
     //
     showUnits()
     //
@@ -87,15 +87,15 @@ function init() {
         })
     }, true)
     // выделяет кнопку (переделать)
-    select()
-    function select(e) {
-        document.querySelector('.event-switcher').querySelectorAll('.btn').forEach(btn => { btn.classList.remove('btn_selected') })
-        if (e) {
-            e.target.classList.add('btn_selected')
-        } else {
-            document.querySelector('.event-switcher').querySelectorAll('.btn')[currentEvent].classList.add('btn_selected')
-        }
-    }
+    // select()
+    // function select(e) {
+    //     document.querySelector('.event-switcher').querySelectorAll('.btn').forEach(btn => { btn.classList.remove('btn_selected') })
+    //     if (e) {
+    //         e.target.classList.add('btn_selected')
+    //     } else {
+    //         document.querySelector('.event-switcher').querySelectorAll('.btn')[currentEvent].classList.add('btn_selected')
+    //     }
+    // }
     //
     ctrlBtn.right.addEventListener('click', () => {pointRouter('right')})
     ctrlBtn.left.addEventListener('click', () => {pointRouter('left')})
@@ -129,14 +129,16 @@ function pointRouter(direction) {
 
 //
 function showUnits() {
-    const units = events[currentEvent].units.filter(unit => unit.location === currentPoint)
-    //
-    const unitBtns = unitsSpace(units)
-    unitBtns.forEach((unitBtn, index) => {
-        unitBtn.addEventListener('click', () => {
-            popUpContext(units[index])
-        })
-    });
-    //
-    document.addEventListener('click', () => { popUpContext(null) }, true)
+    if (events[currentEvent].units) {
+        const units = events[currentEvent].units.filter(unit => unit.location === currentPoint)
+        //
+        const unitBtns = unitsSpace(units)
+        unitBtns.forEach((unitBtn, index) => {
+            unitBtn.addEventListener('click', () => {
+                popUpContext(units[index])
+            })
+        });
+        //
+        document.addEventListener('click', () => { popUpContext(null) }, true)
+    }
 }

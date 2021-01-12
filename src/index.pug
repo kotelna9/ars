@@ -4,7 +4,7 @@ include components/bg-switcher/bg-switcher.pug
 include components/control-btns/control-btns.pug
 include components/units-space/units-space.pug
 include components/pop-up-context/pop-up-context.pug
-include components/event-switcher/event-switcher.pug
+//- include components/event-switcher/event-switcher.pug
 include components/event-info/event-info.pug
 
 block variables
@@ -13,12 +13,11 @@ block variables
 
 block content
     +b.H1.title ars котельная
-    +b.P.test экспериментальная разработка
     +event-info
     +b.window-box
       +b.proportion-box
         +bg-switcher
         +units-space
-        +event-switcher
+        //- +event-switcher
         +pop-up-context
         +control-btns

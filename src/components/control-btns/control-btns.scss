@@ -47,6 +47,7 @@
             .btn__icon {
                 // background-color: rgba(255, 255, 255, 0.616);
                 background-color: rgba(0, 139, 139, 0.274);
+                filter: invert(1);
             }
         }
         &__icon {
@@ -55,15 +56,26 @@
             min-width: 40px;
             min-height: 40px;
             border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            color: rgb(78, 47, 53);
-            // border: 1px solid lightcyan;
-            border: 1px solid darkcyan;
+            border: 1px solid rgba(121, 121, 153, 0.527);
+            &_forward {
+                background: no-repeat url('./arrow-up.svg');
+                background-size: 50%;
+                background-position: 9px 8px;
+            }
+            &_left {
+                background: no-repeat center url('./arrow-left.svg');
+                background-size: 50%;
+                background-position: 8px 10px;
+            }
+            &_right {
+                background: no-repeat center url('./arrow-right.svg');
+                background-size: 50%;
+            }
+            &_backward {
+                background: no-repeat url('./arrow-down.svg');
+                background-size: 50%;
+                background-position: 9px 12px;
+            }
         }
         &_none {
             display: none;
