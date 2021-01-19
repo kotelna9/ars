@@ -7,30 +7,30 @@
             "backward": 23,
             "forward": 11,
             "forwardPosition": {
-                "x": 23,
+                "x": 18,
                 "y": 60
             },
-            "url": "images/0_0-min.jpg"
+            "url": "images/s0.jpg"
         },
 		{
             "id": 1,
             "right": 2,
             "left": 0,
             "backward": 10,
-            "url": "images/0_1-min.jpg"
+            "url": "images/s1.jpg"
         },
 				{
             "id": 2,
             "right": 3,
             "left": 1,
             "backward": 8,
-            "url": "images/3_2-min.jpg"
+            "url": "images/s2.jpg"
         },
 		{
             "id": 3,
             "right": 4,
             "left": 2,
-            "url": "images/1_3-min.jpg"
+            "url": "images/s3.jpg"
         },
 		{
             "id": 4,
@@ -39,10 +39,10 @@
             "backward": 9,
             "forward": 16,
             "forwardPosition": {
-                "x": 64,
+                "x": 84,
                 "y": 60
             },
-            "url": "images/1_4-min.jpg"
+            "url": "images/s4.jpg"
         },
 		{
             "id": 5,
@@ -50,17 +50,17 @@
             "left": 4,
             "forward": 15,
             "forwardPosition": {
-                "x": 55,
-                "y": 55
+                "x": 50,
+                "y": 60
             },
-            "url": "images/2_5-min.jpg"
+            "url": "images/s5.jpg"
         },
 		{
             "id": 6,
             "right": 10,
             "left": 5,
             "backward": 7,
-            "url": "images/2_6-min.jpg"
+            "url": "images/s6.jpg"
         },
 		{
             "id": 7,
@@ -72,7 +72,7 @@
                 "x": 49,
                 "y": 68
             },
-            "url": "images/2_7-min.jpg"
+            "url": "images/s7.jpg"
         },
 		{
             "id": 8,
@@ -80,10 +80,10 @@
             "left": 4,
             "forward": 6,
             "forwardPosition": {
-                "x": 47,
-                "y": 60
+                "x": 50,
+                "y": 70
             },
-            "url": "images/3_8-min.jpg"
+            "url": "images/s8.jpg"
         },
 		{
             "id": 9,
@@ -95,43 +95,42 @@
                 "x": 50,
                 "y": 57
             },
-            "url": "images/1_9-min.jpg"
+            "url": "images/s9.jpg"
         },
 		{
             "id": 10,
             "right": 0,
             "left": 6,
             "backward": 1,
-            "url": "images/0_10-min.jpg"
+            "url": "images/s10.jpg"
         },
 		{
             "id": 11,
             "right": 12,
             "backward": 23,
-            "url": "images/11.jpg"
+            "url": "images/s11.jpg"
         },
 		{
             "id": 12,
             "right": 14,
             "left": 13,
             "backward": 11,
-            "url": "images/12.jpg"
+            "url": "images/s12.jpg"
         },
 		{
             "id": 13,
             "left": 12,
             "backward": 14,
-            "url": "images/13.jpg"
+            "url": "images/s13.jpg"
         },
 		{
             "id": 14,
             "right": 12,          
             "backward": 13,
-            "url": "images/14.jpg"
+            "url": "images/s14.jpg"
         },
 		{
             "id": 15,
-            "right": 19,
             "left": 0,
             "backward": 21,
             "forward": 17,
@@ -139,33 +138,31 @@
                 "x": 91,
                 "y": 17
             },
-            "url": "images/15.jpg"
+            "url": "images/s15.jpg"
         },
 		{
             "id": 16,
             "right": 5,
             "left": 3,
             "backward": 9,
-            "url": "images/16.jpg"
+            "url": "images/s16.jpg"
         },
 		{
             "id": 17,
-            "right": 19,
             "left": 15,
             "backward": 18,
-            "url": "images/17.jpg"
+            "url": "images/s17.jpg"
         },
 		{
             "id": 18,
             "right": 15,
-            "left": 19,
             "backward": 17,
             "forward": 21,
             "forwardPosition": {
-                "x": 80,
-                "y": 21
+                "x": 87,
+                "y": 41
             },
-            "url": "images/18.jpg"
+            "url": "images/s18.jpg"
         },
 		{
             "id": 19,
@@ -180,21 +177,21 @@
             "forward": 15,
             "forwardPosition": {
                 "x": 79,
-                "y": 52
+                "y": 85
             },
-            "url": "images/20.jpg"
+            "url": "images/s20.jpg"
         },
 		{
             "id": 21,
             "right": 22,
             "backward": 20,
-            "url": "images/21.jpg"
+            "url": "images/s21.jpg"
         },
 		{
             "id": 22,
             "right": 20,
             "left": 21,
-            "url": "images/22.jpg"
+            "url": "images/s22.jpg"
         },
 		{
             "id": 23,
@@ -203,10 +200,10 @@
             "backward": 0,
             "forward": 4,
             "forwardPosition": {
-                "x": 38,
+                "x": 43,
                 "y": 62
             },
-            "url": "images/0_23-min.jpg"
+            "url": "images/s23.jpg"
         }
     ]
 }
