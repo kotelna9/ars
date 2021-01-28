@@ -26,6 +26,9 @@ const points = map.points
 import archive from '@data/archive.json'
 const events = archive.events
 
+//слайдер событий
+import EventSlider from '@comp/event-slider/event-slider'
+
 //инициализация переключателя на стартовой точке
 let currentPoint = 0
 let currentDirection = 'right'
@@ -53,7 +56,7 @@ const setProportionHeight = () => {
 let isCtrlBloked = false
 const transitionTime = 1500
 //
-const currentDate = '01-28 февраля 2021'
+const currentDate = '06.02.21'
 let currentEvent = events.find(e => e.date === currentDate).id
 
 // ИНИЦИАЛИЗАЦИЯ
@@ -101,6 +104,23 @@ function init() {
     ctrlBtn.left.addEventListener('click', () => {pointRouter('left')})
     ctrlBtn.backward.addEventListener('click', () => {pointRouter('backward')})
     ctrlBtn.forward.addEventListener('click', () => {pointRouter('forward')})
+
+    //инициализация слайдера
+    const elementSlider = document.querySelector('.slider');
+    const slider = new EventSlider({
+        id: 0,
+        element: elementSlider,
+        data: events,
+        current: 1
+    });
+    elementSlider.addEventListener('eventchange', ()=>{
+        unitsSpace(null);
+        currentEvent = slider.currentValue;
+        showUnits()
+
+        eventInfo(events[slider.currentValue]);
+    });
+
     //
     setProportionHeight()
     window.addEventListener('resize', () => {

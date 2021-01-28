@@ -3,6 +3,8 @@
 .page {
     max-width: 1920px;
     min-width: 320px;
+
+    touch-action: none;
 }
 
 p {
@@ -41,4 +43,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.slider-box {
+    position: absolute;
+    left: 35%;
+    top: 2%;
+    width: 30%;
+    opacity: 0.9;
 }
